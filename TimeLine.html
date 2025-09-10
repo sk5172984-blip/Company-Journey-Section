@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exact Timeline</title>
+  <style>
+    body {
+      background-color: #1e1e1e;
+      margin: 0;
+      padding: 40px 0;
+      display: flex;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .timeline-wrapper {
+      background: #f5fcff;
+      border-radius: 8px;
+      width: 90%;
+      max-width: 1100px;
+      padding: 40px 20px;
+      position: relative;
+    }
+
+    .timeline-line {
+      position: absolute;
+      top: 70px;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(to right, #007bff 80%, #00c896 100%);
+      z-index: 0;
+      margin: auto;
+      width: calc(100% - 100px);
+    }
+
+    .timeline {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      position: relative;
+      z-index: 1;
+    }
+
+    .event {
+      text-align: center;
+      width: 22%;
+      position: relative;
+    }
+
+    .event-dot {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #007bff;
+      margin: 0 auto 20px auto;
+      z-index: 2;
+      position: relative;
+    }
+
+    .event:first-child .event-dot {
+      background-color: #00c896;
+    }
+
+    .event-year {
+      color: #007bff;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .event-desc {
+      color: #333;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+      .timeline {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .timeline-line {
+        display: none;
+      }
+
+      .event {
+        width: 90%;
+        margin-bottom: 40px;
+      }
+
+      .event-dot {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="timeline-wrapper">
+  <div class="timeline-line"></div>
+  <div class="timeline">
+    <div class="event">
+      <div class="event-dot"></div>
+      <div class="event-year">1982</div>
+      <div class="event-desc">Started as Medical Representative at Bevit Pharmaceuticals.</div>
+    </div>
+    <div class="event">
+      <div class="event-dot"></div>
+      <div class="event-year">1987</div>
+      <div class="event-desc">Promoted to Area Manager, expanded Karnataka operations.</div>
+    </div>
+    <div class="event">
+      <div class="event-dot"></div>
+      <div class="event-year">1994</div>
+      <div class="event-desc">Became Regional Manager, led 25-member team.</div>
+    </div>
+    <div class="event">
+      <div class="event-dot"></div>
+      <div class="event-year">1998</div>
+      <div class="event-desc">Assigned Maharashtra region for business expansion.</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
